@@ -1,0 +1,15 @@
+go 1.27.1
+
+use (
+	./services/api-gateway
+	./services/audit-log
+	./services/catalog
+	./services/content-publication
+	./services/external-ingestion
+	./services/ml-feature-computation
+	./services/telegram-gateway
+	./services/user-notification
+	./services/user-registration
+	./services/user-state
+	./shared
+)
