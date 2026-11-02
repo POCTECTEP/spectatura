@@ -3,7 +3,6 @@ go 1.27.1
 use (
 	./services/api-gateway
 	./services/audit-log
-	./services/catalog
 	./services/external-ingestion
 	./services/ml-feature-computation
 	./services/notification-delivery
