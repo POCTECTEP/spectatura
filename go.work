@@ -4,11 +4,10 @@ use (
 	./services/api-gateway
 	./services/audit-log
 	./services/catalog
-	./services/content-publication
 	./services/external-ingestion
 	./services/ml-feature-computation
+	./services/notification-delivery
 	./services/telegram-gateway
-	./services/user-notification
 	./services/user-registration
 	./services/user-state
 	./shared
