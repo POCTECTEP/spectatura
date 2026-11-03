@@ -1,8 +1,17 @@
-stages:
-  - test
+workflow:
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+      when: always
+    - when: never
 
-hello_world:
-  stage: test
-  image: alpine:latest
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
   script:
-    - echo "Hello World!"
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+    - chmod 600 ~/.ssh/id_ed25519
+    - ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_ed25519 root@$SSH_HOST "cd /opt/spectatura && git pull origin main"
