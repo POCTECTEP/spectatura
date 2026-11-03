@@ -1,0 +1,5 @@
+containers/data/
+tmp/
+.venv/
+.git/
+.gitlab-ci.yml
